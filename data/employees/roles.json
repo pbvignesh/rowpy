@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "role": "HR"
+  },
+  {
+    "id": 2,
+    "role": "Consulting"
+  },
+  {
+    "id": 3,
+    "role": "Community"
+  }
+]
