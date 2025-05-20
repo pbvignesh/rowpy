@@ -44,6 +44,17 @@ class Database:
         """Method to get all the table data"""
         print(self.tables[table_name])
 
+    def update_row(self, table_name, id, new_row_data):
+        """Method to update the row of a table"""
+        rows = self.tables[table_name]
+        for i, row in enumerate(rows):
+            if row["id"] != id:
+                continue
+
+            rows[i] = new_row_data
+
+        self._save_table(table_name)
+
     def _save_table(self, table_name: str):
         """Method to persist the table"""
         file_name = self.database_directory / (table_name + ".json")
